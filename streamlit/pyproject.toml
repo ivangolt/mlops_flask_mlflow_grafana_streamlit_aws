@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "streamlit"
+version = "0.1.0"
+description = ""
+authors = ["ivan golt <102701882+ivangolt@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "*"
+xgboost = "*"
+requests = "*"
+mlflow = "*"
+sklearn = "*"
+pillow = "*"
+streamlit = "==1.9.2"
+
+
+[tool.poetry.group.dev.dependencies]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

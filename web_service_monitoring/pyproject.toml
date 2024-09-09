@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "web-service-monitoring"
+version = "0.1.0"
+description = ""
+authors = ["ivan golt <102701882+ivangolt@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "web_service_monitoring"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "*"
+gunicorn = "*"
+mlflow = "*"
+requests = "*"
+sklearn = "*"
+xgboost = "*"
+
+
+[tool.poetry.group.dev.dependencies]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

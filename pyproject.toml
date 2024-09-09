@@ -1,0 +1,76 @@
+[tool.poetry]
+name = "mlops-flask-mlflow-grafana-streamlit-aws"
+version = "0.1.0"
+description = ""
+authors = ["ivan golt <102701882+ivangolt@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "mlops_flask_mlflow_grafana_streamlit_aws"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+ruff = "^0.6.4"
+pre-commit = "^3.8.0"
+mypy = "^1.11.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+# Settings for Ruff
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+builtins = [
+    "snakemake",  # may appear undefined as passed to scripts via `Snakefile`
+]
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
+
+
+# Settings for mypy
+[tool.mypy]
+# Specify Python version
+python_version = "3.11"
+
+# MyPy configuration options
+# Specify strictness level
+strict = true
+
+# Enable incremental mode for faster subsequent runs
+incremental = true
+
+# Treat missing imports as errors
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+disallow_incomplete_defs = true
+
+# Exclude certain files or directories from type checking
+exclude = [
+    "node_modules",
+    "build",
+    ".venv",
+    ".ruff_cache",
+    "mypy_cache"
+
+]
+
+# Ignore certain errors or modules
+ignore_errors = true
